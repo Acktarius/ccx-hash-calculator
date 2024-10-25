@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #ffa500;
+  --secondary-color: #868ba1;
+  --background-dark: #212529;
+  --background-light: #e4e5f1;
+  --main-background-dark: #282d31;
+  --main-background-light: #e9ecef;
+  --text-dark: #212529;
+  --text-light: #fafafa;
+  --nvidia-color: #7dc130;
+  --amd-color: #ed1c24;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App.dark {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+.App.light {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+.banner {
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.conceal-logo {
+  height: 5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: var(--main-background-dark);
+}
+
+.App.light main {
+  background-color: var(--main-background-light);
+}
+
+.gpu-selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gpu-selector {
+  width: auto;
+  background-color: var(--background-dark);
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+}
+
+.gpu-selector:hover {
+  box-shadow: 0 3px 4px 0px black;
+}
+
+.App.light .gpu-selector {
+  background-color: var(--background-light);
+}
+
+.gpu-selector h2 {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.gpu-selector.nvidia h2 {
+  color: var(--nvidia-color);
+}
+
+.gpu-selector.amd h2 {
+  color: var(--amd-color);
+}
+
+.gpu-selector ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.gpu-selector li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.gpu-selector button {
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
+}
+
+.rig-summary {
+  background-color: var(--background-dark);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.App.light .rig-summary {
+  background-color: var(--background-light);
+}
+
+.gpu-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.gpu-column {
+  width: 48%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  padding: 0 0.5rem 0 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.gpu-column .nvidia h3 {
+  color: var(--nvidia-color);
+}
+
+.gpu-column .amd h3 {
+  color: var(--amd-color);
+}
+
+.gpu-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.gpu-column li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+}
+
+.gpu-column li.total-hashrate {
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--primary-color);
+  padding-top: 0.5rem;
+}
+
+.gpu-column li.total-hashrate strong {
+  width: 100%;
+  text-align: right;
+}
+
+.rig-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.rig-stats p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.bottom-banner {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.App.light .bottom-banner {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+.banner-header {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.banner-content {
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 1rem;
+  border-top: 1px solid var(--primary-color);
+}
+
+
+.bottom-banner .banner-content p {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0;
+}
+
+.bottom-banner a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.bottom-banner a:hover {
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+.App.light footer {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+.small-print {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 1rem;
+}

@@ -1,0 +1,24 @@
+{
+  "nvidia": [
+    { "name": "RTX 1660 S", "hashrate": 1.15, "power": 62 },
+    { "name": "RTX 1660 Ti", "hashrate": 1.16, "power": 58 },
+    { "name": "RTX 3060", "hashrate": 1.99, "power": 75 },
+    { "name": "RTX 3070", "hashrate": 3.0, "power": 120 },
+    { "name": "RTX 3080", "hashrate": 3.69, "power": 178 },
+    { "name": "RTX 3090", "hashrate": 5.3, "power": 222 },
+    { "name": "RTX 4060 Ti", "hashrate": 4.0, "power": 180 },
+    { "name": "RTX 4070 S", "hashrate": 4.13, "power": 142 },
+    { "name": "RTX 4070 Ti", "hashrate": 4.6, "power": 180 },
+    { "name": "RTX 4090", "hashrate": 12.57, "power": 380 }
+  ],
+  "amd": [
+    { "name": "RX 6400", "hashrate": 0.7, "power": 30 },
+    { "name": "RX 6500 XT", "hashrate": 0.98, "power": 45 },
+    { "name": "RX 6600", "hashrate": 1.7, "power": 60 },
+    { "name": "RX 6600 XT", "hashrate": 1.42, "power": 80 },
+    { "name": "RX 6700 XT", "hashrate": 2.49, "power": 75 },
+    { "name": "RX 6800", "hashrate": 3.35, "power": 175 },
+    { "name": "RX 6800 XT", "hashrate": 4.0, "power": 180 },
+    { "name": "RX 6900 XT", "hashrate": 3.71, "power": 146 }
+  ]
+}
